@@ -10,6 +10,6 @@ const analyticsProjects = [
   //   title: "Project name",
   //   summary: "One or two lines about what it is.",
   //   star: false,
-  //   link: "https://yawar3978-web.github.io"
+  //   link: ""
   // }
 ];
