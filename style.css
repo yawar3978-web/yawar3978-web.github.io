@@ -1,0 +1,1087 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #222222;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Header ---------- */
+header {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 60px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #e8643c;
+}
+
+nav a {
+  margin: 0 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #e8643c;
+}
+
+.talk {
+  display: flex;
+  text-decoration: none;
+}
+
+.arrow {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: #e8643c;
+  color: #ffffff;
+}
+
+.talk-text {
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  border: 1px solid #3a3a3a;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.talk:hover .talk-text {
+  border-color: #e8643c;
+}
+
+/* ---------- Shared label ---------- */
+.label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.label::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 10px;
+  background: #e8643c;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 640px;
+  padding: 40px 60px 0;
+  overflow: hidden;
+}
+
+.intro {
+  position: relative;
+  z-index: 3;
+  max-width: 55%;
+}
+
+.intro h1 {
+  font-size: clamp(36px, 5.3vw, 80px);
+  line-height: 1.05;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bright {
+  color: #ffffff;
+}
+
+.dim {
+  color: #555555;
+}
+
+.intro p {
+  margin-top: 22px;
+  font-size: 16px;
+  color: #a5a5a5;
+}
+
+/* ---------- Photo ---------- */
+.photo {
+  position: absolute;
+  z-index: 1;
+  right: 5vw;
+  bottom: 0;
+  width: 32vw;
+}
+
+.photo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e8643c, #b8431f);
+}
+
+.photo img {
+  position: relative;
+  width: 100%;
+}
+
+/* ---------- Signature ---------- */
+.name-wrap {
+  position: relative;
+  z-index: 2;
+  height: 20vw;
+  margin-top: 20px;
+}
+
+.signature {
+  position: absolute;
+  left: 8vw;
+  top: 1vw;
+  width: 60vw;
+  max-width: none;
+  pointer-events: none;
+}
+
+/* ---------- See my work bubble ---------- */
+.hire {
+  position: absolute;
+  z-index: 4;
+  left: 3vw;
+  bottom: 0;
+  width: 110px;
+  height: 110px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e8643c;
+  box-shadow: 0 0 40px rgba(232, 100, 60, 0.35);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.hire:hover {
+  transform: scale(1.08);
+}
+
+/* ---------- Work ---------- */
+.work {
+  padding: 80px 60px;
+}
+
+.work .label {
+  margin-bottom: 32px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 280px));
+  gap: 20px;
+}
+
+.card {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  background: #1b1b1b;
+  border: 1px solid #333333;
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #e8643c;
+}
+
+.card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #a5a5a5;
+}
+
+.card-link {
+  align-self: flex-start;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  color: #e8643c;
+}
+
+/* The real project */
+.card-live {
+  border-color: #e8643c;
+  transition: transform 0.3s;
+}
+
+.card-live:hover {
+  transform: translateY(-4px);
+}
+
+/* Placeholders */
+.card-soon {
+  border-style: dashed;
+  background: transparent;
+}
+
+.card-soon h3 {
+  color: #666666;
+}
+
+/* ---------- Homepage boxes are links ---------- */
+a.card {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card:hover .card-link {
+  color: #e8643c;
+}
+
+/* ---------- Active menu link ---------- */
+nav a.active {
+  color: #e8643c;
+}
+
+/* ---------- Work page: heading ---------- */
+.page-hero {
+  padding: 40px 60px 20px;
+}
+
+.page-hero h1 {
+  font-size: clamp(36px, 5.3vw, 80px);
+  line-height: 1.05;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* ---------- Work page: list ---------- */
+.work-list-section {
+  padding: 40px 60px 60px;
+}
+
+.work-list {
+  border-top: 1px solid #333333;
+}
+
+.work-row {
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid #333333;
+}
+
+.work-row h3 {
+  font-size: clamp(22px, 2.6vw, 36px);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.work-row p {
+  margin-top: 8px;
+  max-width: 60ch;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #a5a5a5;
+}
+
+.row-link {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.row-link:hover,
+.work-row.live:hover h3 {
+  color: #e8643c;
+}
+
+.work-row.soon h3 {
+  color: #666666;
+}
+
+.row-status {
+  font-size: 13px;
+  font-weight: 700;
+  color: #8a8a8a;
+}
+
+/* ---------- Work page: resume ---------- */
+.resume {
+  padding: 20px 60px 100px;
+}
+
+.resume-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 40px;
+  border: 1px dashed #555555;
+}
+
+.resume-box h2 {
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #666666;
+}
+
+.resume-box p {
+  margin-top: 10px;
+  max-width: 48ch;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #a5a5a5;
+}
+
+.resume-status {
+  font-size: 13px;
+  font-weight: 700;
+  color: #8a8a8a;
+}
+
+/* ---------- Work page on small screens ---------- */
+@media (max-width: 800px) {
+  .page-hero,
+  .work-list-section,
+  .resume {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .work-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .resume-box {
+    padding: 24px;
+  }
+}
+
+/* ---------- Phones: homepage and header ---------- */
+@media (max-width: 800px) {
+
+  /* Header: logo and button on top, menu on its own row */
+  header {
+    flex-wrap: wrap;
+    row-gap: 14px;
+    padding: 20px;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+  }
+
+  nav a {
+    margin: 0 18px 0 0;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: auto;
+    padding: 24px 20px 0;
+  }
+
+  .intro {
+    max-width: 100%;
+  }
+
+  .intro h1 {
+    font-size: 34px;
+  }
+
+  .photo {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 78vw;
+    margin: 28px 0 0 auto;
+  }
+
+  /* Signature overlaps the bottom of the photo */
+  .name-wrap {
+    height: 44vw;
+    margin-top: -26vw;
+  }
+
+  .signature {
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .hire {
+    left: 0;
+    width: 88px;
+    height: 88px;
+    font-size: 11px;
+  }
+
+  /* Work boxes stack in one column */
+  .work {
+    padding: 60px 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    aspect-ratio: auto;
+    min-height: 220px;
+    gap: 24px;
+  }
+}
+
+/* ---------- Phone fixes ---------- */
+@media (max-width: 800px) {
+
+  /* Give the ball's glow room so it isn't cut off */
+  .hero {
+    padding-bottom: 40px;
+  }
+
+  .hire {
+    box-shadow: 0 0 28px rgba(232, 100, 60, 0.3);
+  }
+
+  /* Fade the bottom of the photo into the page */
+  .photo img {
+    -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent);
+    mask-image: linear-gradient(to bottom, #000 78%, transparent);
+  }
+
+  /* Slightly larger signature, a little higher */
+  .name-wrap {
+    height: 50vw;
+    margin-top: -30vw;
+  }
+
+  .signature {
+    left: -3vw;
+    top: -3vw;
+    width: 106%;
+  }
+}
+
+
+/* ---------- Desktop: soften photo edges ---------- */
+.photo img {
+  -webkit-mask-image:
+    linear-gradient(to bottom, #000 75%, transparent),
+    linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, #000 75%, transparent),
+    linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  mask-composite: intersect;
+}
+
+/* Give the ball's glow room so it isn't cut off */
+.hero {
+  padding-bottom: 40px;
+}
+
+/* ---------- Contact page ---------- */
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 300px);
+  gap: 60px;
+  align-items: start;
+  padding: 40px 60px 0;
+}
+
+.contact-title {
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 1.05;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.contact-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  margin-top: 100px;
+}
+
+.contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 240px;
+  padding-top: 14px;
+  border-top: 1px solid #444444;
+}
+
+.col-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8a8a8a;
+}
+
+.contact-col a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-col a:hover {
+  color: #e8643c;
+}
+
+/* Portrait on an orange background */
+.contact-photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #000000;
+}
+
+.contact-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Big greeting words that overlap the bottom of the photo */
+.greetings {
+  position: relative;
+  z-index: 2;
+  margin-top: -0.5em;
+  padding: 0 60px;
+  height: 0.8em;
+  overflow: hidden;
+  font-size: clamp(48px, 9vw, 140px);
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+}
+
+@media (max-width: 800px) {
+  .contact-page {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 340px);
+  gap: 60px;
+  align-items: start;
+  padding: 40px 60px 0;
+}
+
+  .contact-cols {
+    margin-top: 48px;
+    gap: 32px;
+  }
+
+  .contact-col {
+    width: 100%;
+  }
+
+  .contact-photo {
+    width: 70%;
+  }
+
+  .greetings {
+    margin-top: -0.5em;
+    padding: 0 20px;
+    font-size: 15vw;
+  }
+}
+
+/* ============ CONTACT PAGE (final version) ============ */
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 340px);
+  gap: 60px;
+  align-items: start;
+  padding: 40px 60px 0;
+}
+
+.contact-title {
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 1.05;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.contact-intro {
+  margin-top: 24px;
+  max-width: 36ch;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #a5a5a5;
+}
+
+.contact-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  margin-top: 70px;
+}
+
+.contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 240px;
+  padding-top: 14px;
+  border-top: 1px solid #444444;
+}
+
+.col-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8a8a8a;
+}
+
+.contact-col a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-col a:hover {
+  color: #e8643c;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Photo and rotating badge */
+.contact-side {
+  position: relative;
+}
+
+.contact-photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #000000;
+}
+
+.contact-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.hello {
+  position: absolute;
+  z-index: 3;
+  left: -70px;
+  bottom: 90px;
+  width: 140px;
+  height: 140px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e8643c;
+  box-shadow: 0 0 40px rgba(232, 100, 60, 0.35);
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.hello:hover {
+  transform: scale(1.08);
+}
+
+.hello-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: spin 14s linear infinite;
+}
+
+.hello-ring text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  fill: #ffffff;
+}
+
+.hello-arrow {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.3s;
+}
+
+.hello:hover .hello-arrow {
+  transform: rotate(45deg);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Big greeting words overlapping the photo */
+.greetings {
+  position: relative;
+  z-index: 2;
+  margin-top: -0.5em;
+  padding: 0 60px;
+  height: 0.8em;
+  overflow: hidden;
+  font-size: clamp(48px, 9vw, 140px);
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hello-ring {
+    animation: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact-page {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 24px 20px 0;
+  }
+
+  .contact-cols {
+    margin-top: 40px;
+    gap: 32px;
+  }
+
+  .contact-col {
+    width: 100%;
+  }
+
+  .contact-side {
+    width: 70%;
+  }
+
+  .contact-photo {
+    width: 100%;
+  }
+
+  .hello {
+    left: auto;
+    right: -30px;
+    bottom: 40px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .hello-ring text {
+    font-size: 10px;
+  }
+
+  .hello-arrow {
+    font-size: 24px;
+  }
+
+  .greetings {
+    margin-top: -0.5em;
+    padding: 0 20px;
+    font-size: 15vw;
+  }
+}
+
+/* ============ ABOUT PAGE ============ */
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 380px) 1fr;
+  gap: 80px;
+  align-items: start;
+  padding: 40px 60px 100px;
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #1b1b1b;
+  border: 1px solid #333333;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.about-intro {
+  max-width: 36ch;
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 600;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+.fact {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid #444444;
+}
+
+.fact p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #a5a5a5;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.tools li {
+  padding: 6px 12px;
+  border: 1px solid #3a3a3a;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.tools li:hover {
+  border-color: #e8643c;
+  color: #e8643c;
+}
+
+.about-btn {
+  display: inline-flex;
+  margin-top: 40px;
+}
+
+@media (max-width: 800px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 24px 20px 60px;
+  }
+
+  .about-photo {
+    max-width: 380px;
+  }
+
+  .fact {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+
+/* ============ WORK PAGE: categories and lists ============ */
+[hidden] {
+  display: none !important;
+}
+
+.cats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: 40px 60px 60px;
+}
+
+.cat {
+  position: relative;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  background: #1b1b1b;
+  border: 1px solid #333333;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.cat:hover {
+  transform: translateY(-4px);
+  border-color: #e8643c;
+}
+
+.cat h2 {
+  font-size: clamp(22px, 2.6vw, 34px);
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.cat:hover h2 {
+  color: #e8643c;
+}
+
+.cat p {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #a5a5a5;
+}
+
+.cat-arrow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #a5a5a5;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.back:hover {
+  color: #e8643c;
+}
+
+.results-title {
+  margin-bottom: 28px;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.work-row.pick {
+  padding-left: 20px;
+  box-shadow: inset 3px 0 0 #e8643c;
+}
+
+.empty {
+  padding: 32px 0;
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+@media (max-width: 800px) {
+  .cats {
+    grid-template-columns: 1fr;
+    padding: 24px 20px 40px;
+  }
+
+  .cat {
+    min-height: 160px;
+  }
+}

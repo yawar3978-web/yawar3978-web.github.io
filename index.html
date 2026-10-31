@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yawar | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">YAWAR BASHIR<span>.</span></a>
+
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="mailto:yawarb579@gmail.com?subject=Hello%20Yawar" class="talk">
+      <span class="arrow">→</span>
+      <span class="talk-text">Let's talk</span>
+    </a>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+
+      <div class="intro">
+        <span class="label">Data Science &amp; Analytics Student</span>
+        <h1>
+          <span class="bright">Curious about data,</span>
+          <span class="dim">obsessed with building.</span>
+        </h1>
+        <p>Still learning, always building, and never short of ideas.</p>
+      </div>
+
+      <div class="photo">
+        <img src="yawar-cutout.png" alt="Photo of Yawar">
+      </div>
+
+      <div class="name-wrap">
+        <a href="work.html" class="hire">See my<br>work</a>
+        <img src="yawar-signature.png" alt="" class="signature">
+      </div>
+
+    </section>
+
+    <section id="work" class="work">
+      <span class="label">Selected work</span>
+      <div class="cards" id="cards"></div>
+    </section>
+
+  </main>
+
+  <script src="work/automation/automation.js"></script>
+  <script src="work/data-analytics/analytics.js"></script>
+  <script src="work/websites/websites.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

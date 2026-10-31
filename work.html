@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work | Yawar Bashir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">YAWAR BASHIR<span>.</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="work.html" class="active">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="mailto:yawarb579@gmail.com?subject=Hello%20Yawar" class="talk">
+      <span class="arrow">→</span>
+      <span class="talk-text">Let's talk</span>
+    </a>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <span class="label">Work</span>
+      <h1>
+        <span class="bright">Everything I've built,</span>
+        <span class="dim">in one place.</span>
+      </h1>
+    </section>
+
+    <!-- The three category boxes (filled by work.js) -->
+    <section class="cats" id="cats"></section>
+
+    <!-- The list for the category you clicked (filled by work.js) -->
+    <section class="work-list-section" id="results" hidden>
+      <a href="#" class="back">← All categories</a>
+      <h2 class="results-title" id="results-title"></h2>
+      <div class="work-list" id="work-list"></div>
+    </section>
+
+    <section class="resume">
+      <span class="label">Resume</span>
+
+      <div class="resume-box">
+        <div>
+          <h2>Resume</h2>
+          <p id="resume-text">Coming soon. I'll add it here once I've built up more projects and experience.</p>
+        </div>
+        <span class="resume-status" id="resume-status">Coming soon</span>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="work/automation/automation.js"></script>
+  <script src="work/data-analytics/analytics.js"></script>
+  <script src="work/websites/websites.js"></script>
+  <script src="work.js"></script>
+</body>
+</html>
